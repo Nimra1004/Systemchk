@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bot UI</title>
+{% load static %}
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="chat-output" id="output">
+  <div class="user-message">
+    <div class="message">Hi! I'm a bot. What's up?</div>
+  </div>
+</div>
+
+<div class="chat-input">
+
+  <form action="get_name" id="user-input-form" method="post">{% csrf_token %}
+    <input type="text" id="user-input" class="user-input" placeholder="Talk to the bot.">
+  </form>
+</div>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+</body>
+<script>
+    var outputArea = $("#output");
+    var out = {{s_results}}
+    console.log(out)
+
+    $("#user-input-form").on("submit", function (e) {
+
+        e.preventDefault();
+
+        var message = $("#user-input").val();
+
+        outputArea.append(`
+    <div class='bot-message'>
+      <div class='message'>
+        ${message}
+      </div>
+    </div>
+  `);
+        setTimeout(function () {
+            outputArea.append(`
+      <div class='user-message'>
+        <div class='message'>
+            ${out}
+        </div>
+      </div>
+    `);
+        }, 250);
+
+        $("#user-input").val("");
+
+    });
+</script>
+</html>
