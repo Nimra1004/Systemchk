@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebffd408-18b3-44b7-ad75-fcbaacec6862" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/Generate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/GenerativeModel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/Intent_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/Main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/TextGenerateTraining.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/collaborative.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/content.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/model.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/polls/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/nlg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/nlu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/predict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/polls/static/js/script1.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/polls/static/js/script1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/polls/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/polls/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,7 +129,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -26,7 +26,7 @@ window.onload = function () {
 				this.send_blank = false;
 				this.placeholder = "Send a message to the chatbot...";
 
-				fetch("/get-response/", {
+				fetch("/polls/get-response/", {
 				    method: 'POST',
 			        body: JSON.parse(JSON.stringify({'message': message['text']})),
 			        cache: 'no-cache', 

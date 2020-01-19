@@ -5,12 +5,12 @@ from django.template import RequestContext
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_protect
 # In[1]
-#from . import predict
-#from . import content
-#from . import Generate
-#from . import Main
-#from . import nlu
-#from . import nlg
+from . import predict
+from . import content
+from . import Generate
+from . import Main
+from . import nlu
+from . import nlg
 import json
 from django.template import loader
 
@@ -31,20 +31,29 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 def get_response(request):
     response = {'status': None}
     if request.method == 'POST':
-        reply = {
-            "message": "1",
-        }
+        #strjson = '{"message": "1"}'
+        print(Main.sadia)
+        hy = str(Main.sadia)
+        strjson = hy
+        print('reloaded')
         reply = request.body.decode('utf-8')
         print(reply)
-        #data = json.dump(reply)
-        data = json.load(reply)
-        message = data['message']
 
-        chat_response = reply
+        #data = json.loads(strjson)
+        #message = data['message']
+        print("done")
+        chat_response = strjson
         response['message'] = {'text': chat_response}
         response['status'] = 'ok'
+        return HttpResponse(
+            json.dumps(response),
+            content_type="application/json"
+        )
+
     else:
+        print("sadia")
         response['error'] = 'no post data found'
+
         return HttpResponse(
             json.dumps(response),
             content_type="application/json"
